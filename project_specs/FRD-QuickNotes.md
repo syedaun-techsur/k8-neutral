@@ -103,14 +103,12 @@ This document specifies the functional behavior of all QuickNotes features in en
 
 ### Process
 
-1. On page load, the server fetches all rows from the `notes` table: `SELECT id, title, pinned, created_at FROM notes ORDER BY pinned DESC, created_at DESC`.
+1. On page load, the server fetches all rows from the `notes` table: `SELECT id, title, body, pinned, created_at FROM notes ORDER BY pinned DESC, created_at DESC`.
 2. If the result set is empty, render the **empty state** (see Outputs).
 3. If the result set is non-empty, render each row as a list item (see Outputs).
 4. The "New note" button/link is rendered regardless of list contents.
 5. User taps/clicks a list row → client navigates to `/notes/[id]/edit`.
 6. User taps/clicks "New note" → client navigates to `/notes/new`.
-
-> **Note:** The `body` column is not fetched or displayed on the list page — only `id`, `title`, `pinned`, and `created_at` are needed.
 
 ---
 
@@ -126,6 +124,7 @@ This document specifies the functional behavior of all QuickNotes features in en
 **Non-empty list state:**
 - A list of note rows, each containing:
   - Note `title` (text)
+  - A body snippet: a short excerpt of the note's `body` (first ≈60 characters, truncated with ellipsis if longer; omitted if `body` is null or empty)
   - A visual distinction for pinned notes (e.g., pin icon, label, or highlighted row)
   - A tappable/clickable link to `/notes/[id]/edit`
 - A "New note" button or link pointing to `/notes/new`
@@ -161,7 +160,7 @@ This page does **not** call a REST API from the client. It performs a direct ser
 
 ### Schema Surface (this feature)
 
-Uses table `notes` — columns: `id`, `title`, `pinned`, `created_at`. See `Y0-schema.md §notes table`.
+Uses table `notes` — columns: `id`, `title`, `body`, `pinned`, `created_at`. See `Y0-schema.md §notes table`.
 ---
 
 ## F01: Note Search
@@ -540,7 +539,7 @@ All create, read, update, and delete operations performed by the REST API (see F
 
 | Operation | SQL Pattern |
 |-----------|------------|
-| List all notes | `SELECT id, title, pinned, created_at FROM notes ORDER BY pinned DESC, created_at DESC` |
+| List all notes | `SELECT id, title, body, pinned, created_at FROM notes ORDER BY pinned DESC, created_at DESC` |
 | Fetch one note | `SELECT id, title, body, pinned, created_at FROM notes WHERE id = $1` |
 | Create note | `INSERT INTO notes (title, body, pinned) VALUES ($1, $2, $3) RETURNING *` |
 | Update note | `UPDATE notes SET title=$1, body=$2, pinned=$3 WHERE id=$4 RETURNING *` |
@@ -1028,7 +1027,7 @@ No additional indexes for MVP. The full table scan is acceptable for a personal 
 
 ```sql
 -- List all notes (home page, F00)
-SELECT id, title, pinned, created_at
+SELECT id, title, body, pinned, created_at
 FROM notes
 ORDER BY pinned DESC, created_at DESC;
 

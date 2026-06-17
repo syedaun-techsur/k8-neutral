@@ -206,7 +206,7 @@ When I need to audit note contents, debug an unexpected state, or automate a dat
 - Has no documented API contract to rely on — improvises SQL queries each time
 
 **Hiring Criteria:**
-- `GET /api/notes` returns a JSON array of all notes with consistent field names (`id`, `title`, `body`, `pinned`, `created_at`)
+- `GET /api/notes` returns a JSON array of all notes with consistent field names (`id`, `title`, `body`, `pinned`, `createdAt`)
 - `POST /api/notes` accepts a JSON body, validates that `title` is non-empty, and returns the created note
 - `DELETE /api/notes/[id]` returns `204` or `200` on success; `404` on unknown ID
 - All error responses return a consistent JSON shape (not HTML error pages)
