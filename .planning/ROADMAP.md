@@ -19,6 +19,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 ## Phase Details
 
 ### Phase 1: Infrastructure & Setup
+**Status**: In Progress
 **Goal**: The project runs, connects to PostgreSQL automatically on first startup, and emits no frame-blocking headers
 **Depends on**: Nothing (first phase)
 **Requirements**: F4-01, F4-02, F4-03, F7-01, F7-02, F7-03
