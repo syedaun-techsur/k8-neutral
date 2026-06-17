@@ -127,3 +127,16 @@ None - no external service configuration required. DATABASE_URL is injected by t
 ---
 *Phase: 01-infrastructure-setup*
 *Completed: 2026-06-17*
+
+## Self-Check: PASSED
+
+- ✅ FOUND: package.json
+- ✅ FOUND: tsconfig.json
+- ✅ FOUND: .gitignore
+- ✅ FOUND: .env.example
+- ✅ FOUND: next.config.mjs
+- ✅ FOUND: app/layout.tsx
+- ✅ FOUND: app/globals.css
+- ✅ FOUND: app/page.tsx
+- ✅ Commit 9b9b113 verified (feat: scaffold Next.js 14)
+- ✅ Commit f50edb0 verified (feat: next.config.mjs iframe-safe headers)
