@@ -1,0 +1,23 @@
+{
+  "name": "quicknotes",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev":   "next dev -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3000"
+  },
+  "dependencies": {
+    "next": "14.2.29",
+    "react": "^18",
+    "react-dom": "^18",
+    "pg": "^8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/pg": "^8",
+    "typescript": "^5"
+  }
+}

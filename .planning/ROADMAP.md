@@ -12,14 +12,14 @@ QuickNotes ships as three coherent phases. Phase 1 establishes the project scaff
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Infrastructure & Setup** - PostgreSQL persistence, auto-migration, env config, Next.js 14 scaffold, port binding, iframe-safe headers
+- [x] **Phase 1: Infrastructure & Setup** - PostgreSQL persistence, auto-migration, env config, Next.js 14 scaffold, port binding, iframe-safe headers (Complete 2026-06-17)
 - [ ] **Phase 2: REST API** - All 6 REST endpoints with validation, proper status codes, and health check
 - [ ] **Phase 3: Frontend UI** - Note list (pinned, newest-first), real-time search, create/edit/delete forms, mobile-first design system
 
 ## Phase Details
 
 ### Phase 1: Infrastructure & Setup
-**Status**: In Progress
+**Status**: Complete (2026-06-17)
 **Goal**: The project runs, connects to PostgreSQL automatically on first startup, and emits no frame-blocking headers
 **Depends on**: Nothing (first phase)
 **Requirements**: F4-01, F4-02, F4-03, F7-01, F7-02, F7-03
@@ -32,8 +32,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Project scaffold + iframe-safe headers (next.config.mjs, package.json scripts, App Router files, X-Frame-Options suppression)
-- [ ] 01-02-PLAN.md — Database module (lib/db.ts with pg Pool, DATABASE_URL validation, CREATE TABLE IF NOT EXISTS auto-migration)
+- [x] 01-01-PLAN.md — Project scaffold + iframe-safe headers (next.config.mjs, package.json scripts, App Router files, X-Frame-Options suppression)
+- [x] 01-02-PLAN.md — Database module (lib/db.ts with pg Pool, DATABASE_URL validation, CREATE TABLE IF NOT EXISTS auto-migration)
 
 ### Phase 2: REST API
 **Goal**: All six REST endpoints behave per spec — correct status codes, validation, and JSON response shapes
@@ -79,6 +79,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure & Setup | 0/2 | Not started | - |
+| 1. Infrastructure & Setup | 2/2 | Complete | 2026-06-17 |
 | 2. REST API | 0/3 | Not started | - |
 | 3. Frontend UI | 0/4 | Not started | - |
