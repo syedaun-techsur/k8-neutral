@@ -79,6 +79,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure & Setup | 0/2 | Not started | - |
+| 1. Infrastructure & Setup | 2/2 | Complete | 2026-06-17 |
 | 2. REST API | 0/3 | Not started | - |
 | 3. Frontend UI | 0/4 | Not started | - |
