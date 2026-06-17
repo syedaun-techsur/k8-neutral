@@ -28,3 +28,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+dist/
+build/
+.next/
+.nuxt/
+.vite/
+.turbo/
+coverage/
+.cache/
