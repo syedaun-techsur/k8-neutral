@@ -28,12 +28,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The `notes` table is created automatically on first startup — no manual SQL steps required
   4. DB connection reads from `DATABASE_URL` env var; no credentials appear in source code
   5. `curl -I http://localhost:3000/` shows no `X-Frame-Options` header in the response
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: Project scaffold — Next.js 14 App Router init, `next.config.mjs`, `package.json` scripts with `0.0.0.0:3000`
-- [ ] 01-02: Database module — `lib/db.ts` with `pg` Pool, `DATABASE_URL` validation, `CREATE TABLE IF NOT EXISTS` auto-migration
-- [ ] 01-03: Iframe & header config — `next.config.mjs` headers to suppress `X-Frame-Options`; verify with `curl -I`
+- [ ] 01-01-PLAN.md — Project scaffold + iframe-safe headers (next.config.mjs, package.json scripts, App Router files, X-Frame-Options suppression)
+- [ ] 01-02-PLAN.md — Database module (lib/db.ts with pg Pool, DATABASE_URL validation, CREATE TABLE IF NOT EXISTS auto-migration)
 
 ### Phase 2: REST API
 **Goal**: All six REST endpoints behave per spec — correct status codes, validation, and JSON response shapes
@@ -79,6 +78,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure & Setup | 0/3 | Not started | - |
+| 1. Infrastructure & Setup | 0/2 | Not started | - |
 | 2. REST API | 0/3 | Not started | - |
 | 3. Frontend UI | 0/4 | Not started | - |
