@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { query, ready } from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
+
 type RouteContext = { params: { id: string } };
 
 export async function GET(
