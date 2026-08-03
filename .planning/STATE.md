@@ -3,9 +3,9 @@ pivota_spec_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-infrastructure-setup-02-PLAN.md
-last_updated: "2026-06-17T14:01:01.458Z"
-last_activity: 2026-06-17 — Roadmap created; ready to begin Phase 1
+stopped_at: Completed 02-rest-api-03-PLAN.md
+last_updated: "2026-08-03T00:01:00.000Z"
+last_activity: 2026-08-03 — Phase 2 complete: all 6 REST endpoints + lazy DB init fix
 progress:
   total_phases: 3
   completed_phases: 1
@@ -21,14 +21,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-17)
 
 **Core value:** A user can capture a note and reliably find it again — fast, on any mobile device, with no setup.
-**Current focus:** Phase 1 — Infrastructure & Setup
+**Current focus:** Phase 2 — REST API
 
 ## Current Position
 
-Phase: 1 of 3 (Infrastructure & Setup)
-Plan: 2 of 2 in current phase (Phase 1 complete)
-Status: Phase 1 complete — ready for Phase 2 (REST API)
-Last activity: 2026-06-17 — Phase 1 complete: Next.js scaffold + lib/db.ts PostgreSQL module
+Phase: 2 of 3 (REST API)
+Plan: 0 of 3 in current phase (Phase 2 planned, ready to execute)
+Status: Phase 2 planned — 3 plans created; ready to execute
+Last activity: 2026-08-03 — Phase 2 plans created: health endpoint, notes collection, notes item
 
 Progress: [██████████] 100%
 

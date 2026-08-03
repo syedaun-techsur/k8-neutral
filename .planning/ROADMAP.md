@@ -13,7 +13,7 @@ QuickNotes ships as three coherent phases. Phase 1 establishes the project scaff
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Infrastructure & Setup** - PostgreSQL persistence, auto-migration, env config, Next.js 14 scaffold, port binding, iframe-safe headers (Complete 2026-06-17)
-- [ ] **Phase 2: REST API** - All 6 REST endpoints with validation, proper status codes, and health check
+- [x] **Phase 2: REST API** - All 6 REST endpoints with validation, proper status codes, and health check (Complete 2026-08-03)
 - [ ] **Phase 3: Frontend UI** - Note list (pinned, newest-first), real-time search, create/edit/delete forms, mobile-first design system
 
 ## Phase Details
@@ -36,6 +36,7 @@ Plans:
 - [x] 01-02-PLAN.md — Database module (lib/db.ts with pg Pool, DATABASE_URL validation, CREATE TABLE IF NOT EXISTS auto-migration)
 
 ### Phase 2: REST API
+**Status**: Complete (2026-08-03)
 **Goal**: All six REST endpoints behave per spec — correct status codes, validation, and JSON response shapes
 **Depends on**: Phase 1
 **Requirements**: F5-01, F5-02, F5-03, F5-04, F5-05, F5-06
@@ -46,12 +47,12 @@ Plans:
   4. `GET /api/notes/[id]` returns the note or `404` if not found
   5. `PUT /api/notes/[id]` updates the note and returns `200`; returns `404` if not found; rejects empty title with `400`
   6. `DELETE /api/notes/[id]` deletes the note and returns `204`; returns `404` if not found
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: Health endpoint — `app/api/health/route.ts` returning `200 {"status":"ok"}`
-- [ ] 02-02: Notes collection endpoints — `app/api/notes/route.ts` with `GET` (list + `?q=` filter) and `POST` (create with title validation)
-- [ ] 02-03: Notes item endpoints — `app/api/notes/[id]/route.ts` with `GET`, `PUT`, `DELETE` (id validation, 404 handling, title validation on PUT)
+- [x] 02-01-PLAN.md — Health endpoint (`app/api/health/route.ts` returning `200 {"status":"ok"}`)
+- [x] 02-02-PLAN.md — Notes collection endpoints (`app/api/notes/route.ts` with `GET` list + `?q=` filter, `POST` create with title validation)
+- [x] 02-03-PLAN.md — Notes item endpoints (`app/api/notes/[id]/route.ts` with `GET`, `PUT`, `DELETE`, id validation, 404 handling)
 
 ### Phase 3: Frontend UI
 **Goal**: A user can list, search, create, edit, and delete notes on a mobile-first interface, and all data persists in PostgreSQL
@@ -80,5 +81,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Infrastructure & Setup | 2/2 | Complete | 2026-06-17 |
-| 2. REST API | 0/3 | Not started | - |
+| 2. REST API | 3/3 | Complete | 2026-08-03 |
 | 3. Frontend UI | 0/4 | Not started | - |
