@@ -73,3 +73,6 @@ This document specifies the functional behavior of all QuickNotes features in en
 - Config file must be `next.config.mjs` — never `next.config.ts`.
 - All API responses are `Content-Type: application/json` unless the response has no body (204).
 - The `notes` table must exist before any API or page handler queries PostgreSQL.
+
+
+<!-- pvc-phase5 verification 2026-08-04 -->
